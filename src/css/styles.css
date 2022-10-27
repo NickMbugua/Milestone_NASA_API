@@ -1,0 +1,551 @@
+* {
+    box-sizing: border-box;
+    font-family: cursive, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.container {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+body {
+    position: relative;
+  }
+  body::after {
+    max-width: 3440px;
+    height: 1440px;
+    height: auto;
+    min-height: 1080px;
+    background-image: url(../img/backgroundImage.jpg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-attachment: inherit;
+    content: "";
+    opacity: 0.20;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+body{
+    background-color: rgb(14 14 14);
+}
+
+.head{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60px;
+    height: 60px;
+    width: 100%;
+    background-color: #60697045;
+    justify-items: center;
+    align-items: center;
+}
+nav {
+    display: flex;
+
+}
+nav a{
+    color: #c2c1c1;
+    background-color: #ffffff1a;
+    margin-left: 10px;
+    border: 10px;
+    padding: 11px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 13px;
+}
+nav a:hover {
+    color: white;
+}
+main {
+    margin: 0 auto;
+}
+button {
+    background-color: #a9a9a94a;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button:hover, nav a:hover {
+    transform: scale(1.1);
+}
+.popUpBackground {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    pointer-events: none;
+}
+.popUpBackground.open {
+    pointer-events: all;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.35s ease-out;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    opacity: 0.5;
+  }
+/*APOD PAGE */
+.days{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+    margin-bottom: 25px;
+}
+.imgApod {
+    height: auto;
+    display: block;
+    padding: 15px;
+    background: rgb(54 54 54 / 24%);
+    box-sizing: border-box;
+    border-radius: 7px;
+    width: 70%;
+    height: 100%;
+   
+}
+.divArea .imgApod:hover {
+    width: 70%;
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 0.15s ease-out;
+}
+.divArea .imgApod
+{
+    height: auto;
+     display: block; 
+    padding: 15px;
+    background: rgb(54 54 54 / 24%);
+    box-sizing: border-box;
+    border-radius: 7px;
+    max-width: 80%;
+    height: 100%
+}
+.imagePopUpDiv {
+    cursor: initial;
+}
+.flex {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 321px;
+}
+.dateFlex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+.heading {
+    font-size: 1.7rem;
+}
+.divArea p {
+    font-size: 1.0rem;
+    width: 70%;
+    height: 50%;
+}
+
+p , h1, h2 {
+    color: rgb(194, 193, 193);
+}
+.divArea
+{
+    margin: auto;
+    max-width: 1080px;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
+.ApodTextClass
+{
+    padding-left: 100px;
+}
+.titleImageFlex {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    align-items: center;
+}
+.imagePopUpDiv{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(16 16 16);
+    border-radius: 15px;
+    cursor: initial;
+}
+.imagePopUpDiv.open {
+    transform: translate(-50%, -50%);
+    transition: all 0.35s ease-out;
+}
+.imagePopUp {
+    border-radius: 15px;
+    position: absolute;
+    margin: auto;
+    cursor: initial;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 700px;
+ 
+}
+
+/*GALLERY PAGE */
+.popUpText>a{
+    color: white;
+}
+h1.heading {
+    text-align: center;
+}
+.errorTextClickButtonFlex{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.clickHistory{
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.picDiv p {
+    display: none;
+}
+.imageHeading{
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+#imageGallery-Flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    column-gap: 35px;
+    row-gap: 15px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 30px 0 30px;
+
+}
+.imageGallery-Flex {
+    margin: auto ;
+    width: 1100px;
+}
+.picDiv img , .divPopUp img {
+    height: auto;
+    display: block; 
+    padding: 15px;
+    background: rgb(54 54 54 / 24%);
+    box-sizing: border-box;
+    border-radius: 7px;
+    height: 100%;
+}
+
+.picDiv:hover {
+    width: 100%;
+    transform: scale(1.1);
+}
+.picDiv {
+    display: flex;
+    text-align: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.divPopUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 70%;
+    max-height: 700px;
+    background: rgb(16 16 16);
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: initial;
+}
+.divPopUp.open {
+    transform: translate(-50%, -50%);
+    transition: all 0.35s ease-out;
+}
+.picDivText {
+    margin: auto;
+    display: grid;
+    max-width: 90%;
+    max-height: 100%;
+    justify-items: center;
+    justify-content: center;
+    cursor: initial;
+}
+.popUpTextDiv {
+ 
+    max-width: 548px;
+    max-height: 100%;
+    margin-bottom: 15px;
+    cursor: initial;
+}
+.popUpText{
+    padding: 4px;
+    background-color: rgb(15, 15, 15);
+    max-width: 548px;
+    max-height:  100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+    cursor: initial;
+}
+
+.divPopUp p, h2 {
+    text-align: center;
+}
+.picDivText>.imageHeading {
+    margin-top: 25px;
+}
+
+.imgGallery {
+    max-width: 100%;
+    max-height: 100%;
+}
+.picDivText .imgGallery {
+    max-width: 100%;
+    max-height: 500px;
+}
+
+.picDivText  .popUpText  {
+    padding: 10px;
+   display: block;
+}
+.closeButton {
+    position: absolute;
+    margin-left: 98%;
+    top: 16px;
+    right: 17px;
+    color: white;
+    font-size: 21px;
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+
+@media (max-width: 500px) {
+    body::after {
+        width: 416px;
+        background-size: contain;
+
+    }
+    .divArea{
+        width: 390px;
+        margin: auto;
+        flex-direction: column;
+    }
+    .container {
+        width: 390px;
+    }
+    .head>h1{
+        display: none;
+    }
+    .head {
+
+        width: 416px;  
+    }
+    
+    nav .linkBtn {
+        margin-left: 10px;
+        border: 10px;
+        padding: 8px 6px;
+        font-size: 15px;
+        border-radius: 13px;
+    }
+    #searchBnt {
+        margin-right: 10px;
+        border: 10px;
+        padding: 8px 6px;
+        font-size: 15px;
+        border-radius: 13px;
+    }
+    input, optgroup, select, textarea {
+        margin: auto;
+        width: 148px;
+    }
+    .heading {
+        font-size: 1.6rem;
+    }
+    .divArea p {
+        text-align: center;
+        width: 330px;
+   
+    }
+    .titleImageFlex {
+        max-width: 100%;
+      
+    }
+    .divArea .imgApod {
+        width: 70%;
+    }
+    .ApodTextClass {
+        padding-left: 0px; 
+    }
+    .imagePopUp {
+        width: 95%;
+        
+    }
+    
+     /*GALLERY PAGE */ 
+
+     #linkApodPageBtn{
+        margin-left: 10px;
+        border: 10px;
+        padding: 8px 6px;
+        font-size: 15px;
+        border-radius: 13px;
+        
+     }
+     #buttonGallery {
+        margin-right: 15px;
+    }
+     #imageGallery-Flex {
+        padding: 10px 20px 0 20px;
+    }
+    
+    #divPopUp {
+        max-width: 100%;
+    }
+    .picDivText>.imageHeading {
+        margin-top: 25px;
+        width: 80%;
+    }
+    .picDivText {
+        max-width: 100%;  
+    }
+    .popUpTextDiv {
+        max-width: 80%;
+        max-height: 100%;
+        margin-bottom: 15px;
+        cursor: initial;
+    }
+    .picDivText .imgGallery {
+        max-width: 390px; 
+    }
+}
+@media (min-width: 440px) and (max-width: 677px)
+{
+    body::after {
+        width: 677px;
+        background-size: contain;
+
+    }
+    p.ApodTextClass {
+        margin-top: 50px;
+        max-height: 400px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: justify;
+        cursor: initial;
+        margin-right: 47px;
+    }
+    .divArea {
+        width: 100%;
+    }
+    .imagePopUp {
+        width: 95%; 
+    }
+}
+@media (min-width: 480px) and (max-width: 768px)
+{
+    .flex {
+        width: 354px;
+        display: flex;
+        justify-content: space-around;
+    }
+    nav>h1 {
+        margin-left: 88px;
+     }
+    input#searchBar {
+        width: 212px;
+    }
+    nav {
+        margin-right: 85px;
+    }
+    .divArea {
+        width: 90%;
+    }
+    p.ApodTextClass {
+        margin-top: 50px;
+        max-height: 400px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: justify;
+        cursor: initial;
+    }.imagePopUp {
+        width: 95%;
+        
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1030px)
+{
+    .flex {
+        width: 354px;
+        display: flex;
+        justify-content: space-around;
+    }
+    nav>h1 {
+        margin-left: 88px;
+     }
+    input#searchBar {
+        width: 212px;
+    }
+    nav {
+        margin-right: 85px;
+    }
+    .divArea {
+        width: 90%;
+    }
+    p.ApodTextClass {
+        margin-top: 50px;
+        max-height: 400px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: justify;
+        cursor: initial;
+    }
+    .imagePopUp {
+        width: 100%;   
+    }
+    .picDivText .imgGallery {
+        max-width: 760px; 
+    }
+    .divArea .imgApod {
+        width: 100%;
+    }
+}

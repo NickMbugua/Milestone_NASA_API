@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA API Image APOD</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="body">
+  <header class="head">
+    <nav>
+      <a href="gallery.html" class="linkGalleryBtn">Gallery</a>
+    </nav>
+    <h1>APOD</h1>
+    <div class="flex">
+      <input id="searchBar" type="text" placeholder="Search Date YYYY-MM-DD">
+      <button id="searchBnt">Search</button>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section>
+        <h2 id="apodTitle">Astronomy Picture of the Day</h2>
+        <br>
+        <div class="days">
+          <button id="lastDayId" class="lastDay">Pervious Day</button>
+          <button id="nextDayId" class="nextDay">Next Day</button>
+        </div>
+        <div class="divArea">
+        </div>
+        <div class="popUpBackground">
+          <div class="imagePopUpDiv" id="imagePopUpDiv"></div>
+        </div>
+      </section>
+      <br>
+    </div>
+  </main>
+  <script src="js/scripts.js" defer></script>
+  <footer>
+    <p>Created by Nick</p>
+  </footer>
+</body>
+
+</html>

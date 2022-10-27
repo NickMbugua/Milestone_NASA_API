@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA API Image Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bodyGallery">
+  <header class="head">
+    <nav>
+      <a href="index.html" id="linkApodPageBtn" data-chg="ok" class="linkBtn">APOD</a>
+    </nav>
+    <h1>Gallery</h1>
+    <div class="flex">
+      <input id="imageSearchBar" type="text" placeholder="Search Spacex, apollo..">
+      <button id="buttonGallery">Search</button>
+    </div>
+  </header>
+  <main>
+    <div class="errorTextClickButtonFlex">
+      <button id="clickHistoryButtonId" class="clickHistory">Clicked History</button>
+      <br>
+      <p id="error"></p>
+      <div id="imageGallery-Flex"> </div>
+      <div class="popUpBackground">
+        <div class="divPopUp" id="divPopUp"></div>
+      </div>
+    </div>
+  </main>
+  <script src="js/scripts2.js" defer></script>
+  <footer>
+    <!--FOOTER-->
+    <p>Created by Nick</p>
+  </footer>
+</body>
+
+</html>
